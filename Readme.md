@@ -1,0 +1,8 @@
+- user {point, name, username, password}
+    - Create
+    - deposit
+- gift {point, amount, name}
+    - Create, Update, Retrieve, List
+    - exchange
+- order {user, gift, time, amount}
+    - Retrieve, List
