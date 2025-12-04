@@ -56,7 +56,12 @@
         - Url: api/gift/
 
     - exchange
-        - Method
+        - Method: POST
+        - Url: api/gift/exchange/
+        - Payload: {
+            "quantity": 50,
+            "id": 2
+        }
 
-- order {user, gift, time, amount}
-    - Retrieve, List
+- order {user, gift, time, amount, }
+    - List

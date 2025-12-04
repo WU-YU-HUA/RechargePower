@@ -5,6 +5,7 @@ class Order(models.Model):
     amount = models.IntegerField(blank=True, null=False, default=0)
     point = models.IntegerField(blank=True, null=False, default=0)
     user = models.ForeignKey('user.User', on_delete=models.SET_NULL, null=True, blank=True, related_name="order_user")
+    time = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return self.amount * self.point
