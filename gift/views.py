@@ -47,6 +47,13 @@ def exchange(request, *args, **kwargs):
     data = request.data
     quantity = data.get('quantity')
     gift = Gift.objects.get(pk=data.get('id'))
+    if quantity > gift.amount:
+        return Response({
+            "success": False,
+            "message": "兌換贈品失敗",
+            "detail": "贈品數量不足"
+        }, status=400)
+
     total = quantity * gift.point
 
     if request.user.point < total:
