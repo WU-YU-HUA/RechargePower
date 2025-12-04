@@ -63,5 +63,7 @@
             "id": 2
         }
 
-- order {user, gift, time, amount, }
+- order {user, gift, time, amount, point}
     - List
+        - Method: GET
+        - Url: api/order/
