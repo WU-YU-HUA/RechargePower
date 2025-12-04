@@ -22,6 +22,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     password = models.CharField(null=True, blank=True, max_length=120)
     name = models.TextField(blank=True, null=True)
     email = models.EmailField(unique=True, blank=True,null=True)
+    point = models.IntegerField(blank=True, null=False, default=0)
 
     is_superuser = models.BooleanField(blank=True, null=False, default=False) #使用admin
     is_staff = models.BooleanField(blank=True, null=False, default=False) #進入admin
