@@ -27,9 +27,36 @@
         - Payload: {
             "point": 0
         }
-        
+
 - gift {point, amount, name}
-    - Create, Update, Retrieve, List
+    - Create
+        - Method: POST
+        - Url: api/gift/
+        - Payload: {
+            "name": "禮物1",
+            "point": 20,
+            "amount": 100
+        }
+
+    - Update
+        - Method: PATCH
+        - Url: api/gift/<id>
+        - Payload: {
+            "point": 0,
+            "amount": 0, 
+            # One or Both are access.
+        }
+
+    - Retrieve, Delete
+        - Method: GET / DELETE
+        - Url: api/gift/<id>
+
+    - List
+        - Method: GET
+        - Url: api/gift/
+
     - exchange
+        - Method
+
 - order {user, gift, time, amount}
     - Retrieve, List
